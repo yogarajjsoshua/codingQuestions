@@ -4,7 +4,7 @@ from huggingface_hub import login
 from pydantic import BaseModel
 
 load_dotenv()
-
+login(token=os.getenv("HF_TOKEN"))
 
 class users(BaseModel):
     id: int
